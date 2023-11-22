@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 600px) {}
+
 :root {
   --default-font: Poppins;
   --default-color: rgb(128, 128, 128);
@@ -11,10 +14,15 @@ body {
   padding: 0;
   font-family: var(--default-font);
   line-height: 1.5;
+  background-color: var(--default-color)
 }
 
 h1, h2 {
   margin: 0;
+}
+
+h2 {
+  font-size: 18px;
 }
 
 p {
@@ -25,19 +33,23 @@ header {
   display: flex;
   flex-direction: row;
   margin: 0px 5%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
+#name {
+  display: flex;
   font-size: 25px;
   width: 50%;
   font-weight: 350px;
 }
 
-nav {
+#navbar {
   display: flex;
-  width: 100%;
+  width: 35%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  font-size: 12px;
 }
 
 .hero {
@@ -55,9 +67,20 @@ nav {
   color: white;
 }
 
+.content-title {
+  width: 100px;
+}
+
 #about {
   display: flex;
-  width: 80%;
+  width: 100%;
+}
+
+#about-text {
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 15px;
+  border-left: 2px solid rgb(124, 121, 121);
 }
 
 .heading {
@@ -69,19 +92,20 @@ nav {
   border-bottom: 5px solid rgba(128, 128, 128, 0.7);
 }
 
-.portGridArea {
+.page-section {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 
 #content {
   margin: 0px 5%;
   display: grid;
-  grid-template-rows: 300px 300px 300px 300px 300px;
+  grid-template-rows: auto 300px 300px 300px 300px;
   grid-template-columns: 1fr;
   grid-template-areas:
   "about"
@@ -91,12 +115,57 @@ nav {
   "contact";
 }
 
-.page-section {
+.details-grid {
+  margin: 0px 5%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 150px 150px 150px;
+  grid-template-areas:
+  "work-1 work-1"
+  "work-2 work-3"
+  "work-4 work-5";
+}
+
+.details-grid-area {
+  display: grid;
+  align-content: end;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 15px;
+  cursor: pointer;
+}
+
+#work-1 {
+  grid-area: work-1;
+  background-image: url(../images/01-horiseon.jpg);
+}
+
+#work-2 {
+  grid-area: work-2;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#work-3 {
+  grid-area: work-3;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#work-4 {
+  grid-area: work-4;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#work-5 {
+  grid-area: work-5;
+  background-image: url("../images/02-run-buddy.jpg");
 }
 
 .contact {
   display: flex;
   width: 100%;
+  margin-top: 100px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
