@@ -7,6 +7,7 @@
 :root {
   --default-font: Poppins;
   --default-color: rgb(128, 128, 128);
+  --line-color: rgb(107, 22, 22);
 }
 
 body {
@@ -19,10 +20,6 @@ body {
 
 h1, h2 {
   margin: 0;
-}
-
-h2 {
-  font-size: 18px;
 }
 
 p {
@@ -67,21 +64,29 @@ header {
   color: white;
 }
 
+#content {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr 50px;
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-areas:
+  "about-title about-text about-text"
+  "work-title work-1 work-1"
+  "work-title work-2 work-3"
+  "work-title work-4 work-5"
+  "contact-title contact-details contact-details";
+}
+
 .content-title {
   width: 100px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-#about {
-  display: flex;
+/* #about {
+  display: flex;  
   width: 100%;
-}
-
-#about-text {
-  margin-left: 15px;
-  margin-top: 15px;
-  padding: 15px;
-  border-left: 2px solid rgb(124, 121, 121);
-}
+} */
 
 .heading {
   background-color: rgba(0, 0, 0, 0.7) ;
@@ -89,10 +94,104 @@ header {
   height: 25px;
   color: white;
   font-size: 20px;
+  align-content: flex-start;
   border-bottom: 5px solid rgba(128, 128, 128, 0.7);
 }
 
-.page-section {
+#about-title {
+  grid-area: about-title;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-right: 2px solid var(--line-color);
+}
+
+#about-text {
+  grid-area: about-text;
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+#work-title {
+  grid-area: work-title;
+  border-right: 2px solid var(--line-color);
+}
+
+.work-grid {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: grid;
+  align-content: end;
+}
+
+#work-1 {
+  grid-area: work-1;
+  background-image: url(../images/01-horiseon.jpg);
+  background-size: cover;
+  height: 150px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+#work-2 {
+  grid-area: work-2;
+  background-image: url("../images/02-portfolio-2.jpg");
+  background-size: cover;
+  height: 150px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+#work-3 {
+  grid-area: work-3;
+  background-image: url("../images/02-portfolio-3.jpg");
+  height: 150px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+#work-4 {
+  grid-area: work-4;
+  background-image: url("../images/02-portfolio-4.jpg");
+  height: 150px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+#work-5 {
+  grid-area: work-5;
+  background-image: url("../images/02-run-buddy.jpg");
+  height: 150px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+#contact-title {
+  grid-area: contact-title;
+  border-right: 2px solid var(--line-color);
+  margin-top: 15px;
+}
+
+#contact-details {
+  grid-area: contact-details;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+/* .page-section {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -100,34 +199,21 @@ header {
   display: flex;
   position: relative;
   flex-wrap: wrap;
-}
+} */
 
-#content {
-  margin: 0px 5%;
-  display: grid;
-  grid-template-rows: auto 300px 300px 300px 300px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "about"
-  "work"
-  "work"
-  "work"
-  "contact";
-}
-
-.details-grid {
+/*.details-grid {
   margin: 0px 5%;
   padding: 0;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 150px 150px 150px;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
   "work-1 work-1"
   "work-2 work-3"
   "work-4 work-5";
-}
+}*/
 
-.details-grid-area {
+/* .details-grid-area {
   display: grid;
   align-content: end;
   background-position: center;
@@ -135,37 +221,4 @@ header {
   background-repeat: no-repeat;
   margin: 15px;
   cursor: pointer;
-}
-
-#work-1 {
-  grid-area: work-1;
-  background-image: url(../images/01-horiseon.jpg);
-}
-
-#work-2 {
-  grid-area: work-2;
-  background-image: url("../images/02-portfolio-2.jpg");
-}
-
-#work-3 {
-  grid-area: work-3;
-  background-image: url("../images/02-portfolio-3.jpg");
-}
-
-#work-4 {
-  grid-area: work-4;
-  background-image: url("../images/02-portfolio-4.jpg");
-}
-
-#work-5 {
-  grid-area: work-5;
-  background-image: url("../images/02-run-buddy.jpg");
-}
-
-.contact {
-  display: flex;
-  width: 100%;
-  margin-top: 100px;
-  align-items: center;
-  justify-content: space-between;
-}
+} */
