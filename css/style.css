@@ -6,7 +6,7 @@
 
 :root {
   --default-font: Poppins;
-  --default-color: rgb(128, 128, 128);
+  --default-color: rgb(199, 199, 199);
   --line-color: rgb(107, 22, 22);
 }
 
@@ -24,6 +24,17 @@ h1, h2 {
 
 p {
   margin: 0;
+  padding: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--line-color);
 }
 
 header {
@@ -78,9 +89,9 @@ header {
 }
 
 .content-title {
-  width: 100px;
-  font-size: 15px;
-  font-weight: 500;
+  width: 150px;
+  font-weight: 800;
+  padding: 5px;
 }
 
 /* #about {
@@ -90,12 +101,11 @@ header {
 
 .heading {
   background-color: rgba(0, 0, 0, 0.7) ;
-  padding: 15px;
-  height: 25px;
+  height: 30px;
   color: white;
-  font-size: 20px;
-  align-content: flex-start;
-  border-bottom: 5px solid rgba(128, 128, 128, 0.7);
+  position: relative;
+  font-size: 15px;
+  border-bottom: 5px solid var(--line-color);
 }
 
 #about-title {
@@ -107,11 +117,9 @@ header {
 
 #about-text {
   grid-area: about-text;
-  width: 100%;
-  margin-left: 15px;
+  margin-left: 25px;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-left: 15px;
 }
 
 #work-title {
@@ -133,9 +141,8 @@ header {
   background-image: url(../images/01-horiseon.jpg);
   background-size: cover;
   height: 150px;
-  margin-left: 15px;
-  margin-bottom: 5px;
-  padding-left: 15px;
+  margin-left: 25px;
+  margin-bottom: 10px;
 }
 
 #work-2 {
@@ -143,36 +150,30 @@ header {
   background-image: url("../images/02-portfolio-2.jpg");
   background-size: cover;
   height: 150px;
-  margin-left: 15px;
-  margin-bottom: 5px;
-  padding-left: 15px;
+  margin-left: 25px;
+  margin-bottom: 10px;
 }
 
 #work-3 {
   grid-area: work-3;
   background-image: url("../images/02-portfolio-3.jpg");
   height: 150px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  padding-left: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 #work-4 {
   grid-area: work-4;
   background-image: url("../images/02-portfolio-4.jpg");
   height: 150px;
-  margin-left: 15px;
-  margin-bottom: 5px;
-  padding-left: 15px;
+  margin-left: 25px;
 }
 
 #work-5 {
   grid-area: work-5;
   background-image: url("../images/02-run-buddy.jpg");
   height: 150px;
-  margin-left: 5px;
-  margin-bottom: 15px;
-  padding-left: 15px;
+  margin-left: 10px;
 }
 
 #contact-title {
@@ -184,9 +185,9 @@ header {
 #contact-details {
   grid-area: contact-details;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
   margin-left: 15px;
-  padding-left: 15px;
+  margin-top: 15px;
+  padding: 5px;
 }
