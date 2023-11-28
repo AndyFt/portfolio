@@ -24,8 +24,8 @@ Portfolio webpage to learn about my work. It contains a smal description of myse
 
 ## Credits
 
-EDX original codes.
-W3Schools for grid and flexbox
+EDX original codes.</br>
+W3Schools for grid and flexbox.</br>
 Thanks to colleagues Thomas Jack, William Rowden, and Nicole Santamaria for their valuable contributions.
 
 ## License
