@@ -104,6 +104,12 @@ header {
   border-bottom: 5px solid var(--line-color);
 }
 
+.photo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
 #about-title {
   grid-area: about-title;
   margin-bottom: 15px;
@@ -114,14 +120,15 @@ header {
   grid-area: about-text;
   margin-left: 25px;
   margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 #work-title {
   grid-area: work-title;
+  margin-top: 15px;
 }
 
 .work-grid {
+  margin-top: 15px;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -137,7 +144,7 @@ header {
   background-size: cover;
   height: 150px;
   margin-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 #work-2 {
@@ -146,7 +153,7 @@ header {
   background-size: cover;
   height: 150px;
   margin-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 #work-3 {
@@ -154,7 +161,7 @@ header {
   background-image: url("../images/02-portfolio-3.jpg");
   height: 150px;
   margin-left: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 #work-4 {
