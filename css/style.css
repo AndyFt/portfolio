@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {}
-
 :root {
   --default-font: Poppins;
   --default-color: rgb(199, 199, 199);
@@ -61,7 +59,6 @@ header {
   width: 35%;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
 }
 
 .hero {
@@ -82,7 +79,7 @@ header {
 #content {
   margin: 0px 5%;
   display: grid;
-  grid-template-rows: auto auto auto 1fr 50px;
+  grid-template-rows: auto auto auto 1fr auto;
   grid-template-columns: 135px 1fr 1fr;
   grid-template-areas:
   "about-title about-text about-text"
@@ -115,7 +112,7 @@ header {
 
 #about-text {
   grid-area: about-text;
-  margin-left: 25px;
+  margin-left: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -128,10 +125,10 @@ header {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0;
   display: grid;
   align-content: end;
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 #work-1 {
@@ -139,8 +136,8 @@ header {
   background-image: url(../images/01-horiseon.jpg);
   background-size: cover;
   height: 150px;
-  margin-left: 25px;
-  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 #work-2 {
@@ -148,30 +145,34 @@ header {
   background-image: url("../images/02-portfolio-2.jpg");
   background-size: cover;
   height: 150px;
-  margin-left: 25px;
-  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 #work-3 {
   grid-area: work-3;
   background-image: url("../images/02-portfolio-3.jpg");
   height: 150px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 #work-4 {
   grid-area: work-4;
   background-image: url("../images/02-portfolio-4.jpg");
   height: 150px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 #work-5 {
   grid-area: work-5;
   background-image: url("../images/02-run-buddy.jpg");
   height: 150px;
-  margin-left: 10px;
+  margin-left: 15px;
+}
+
+#work-1:hover, #work-2:hover, #work-3:hover, #work-4:hover, #work-5:hover {
+  transform: scale(1.1);
 }
 
 #contact-title {
@@ -179,14 +180,15 @@ header {
   margin-top: 15px;
 }
 
-#contact-details {
+.contact-details {
   grid-area: contact-details;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-left: 15px;
   margin-top: 15px;
   padding: 5px;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -199,4 +201,45 @@ footer {
 footer h4 {
   font-weight: 100;
   font-size: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    height: 75px;
+  }
+
+  #name {
+    font-size: 20px;
+    padding-top: 10px;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #navbar {
+    justify-content: space-between;
+    width: 75%;
+    padding-bottom: 10px;
+  }
+
+  #content {
+    grid-template-columns: 110px 1fr 1fr;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .heading {
+    font-size: 12px;
+    bottom: 0;
+    height: 43px;
+  }
+
+  .content-title {
+    font-size: 15px;
+  }
 }
