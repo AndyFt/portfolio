@@ -18,7 +18,7 @@ body {
   background-color: var(--default-color)
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
 }
 
@@ -83,7 +83,7 @@ header {
   margin: 0px 5%;
   display: grid;
   grid-template-rows: auto auto auto 1fr 50px;
-  grid-template-columns: 120px 1fr 1fr;
+  grid-template-columns: 135px 1fr 1fr;
   grid-template-areas:
   "about-title about-text about-text"
   "work-title work-1 work-1"
@@ -97,11 +97,6 @@ header {
   padding: 5px;
   border-right: 2px solid var(--line-color);
 }
-
-/* #about {
-  display: flex;  
-  width: 100%;
-} */
 
 .heading {
   background-color: rgba(0, 0, 0, 0.7) ;
@@ -192,4 +187,16 @@ header {
   margin-left: 15px;
   margin-top: 15px;
   padding: 5px;
+}
+
+footer {
+  padding: 30px;
+  clear: both;
+  font-family: var(--default-font);
+  text-align: center;
+}
+
+footer h4 {
+  font-weight: 100;
+  font-size: 13px;
 }
