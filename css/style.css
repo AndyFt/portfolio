@@ -68,6 +68,7 @@ header {
   justify-content: right;
   background-image: url("../images/background-image.jpg");
   background-repeat: no-repeat;
+  margin-bottom: 15px;
 }
 
 .hero h2 {
@@ -113,13 +114,11 @@ header {
 #about-title {
   grid-area: about-title;
   margin-bottom: 15px;
-  margin-top: 15px;
 }
 
 #about-text {
   grid-area: about-text;
   margin-left: 25px;
-  margin-top: 15px;
 }
 
 #work-title {
